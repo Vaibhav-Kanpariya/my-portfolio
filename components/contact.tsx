@@ -42,7 +42,7 @@ export default function Contact() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
-              <div className="lg:col-span-2 border border-primary">
+              <div className="lg:col-span-2">
                 <Card>
                   <CardContent className="p-6">
                     <form
