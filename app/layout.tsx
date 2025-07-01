@@ -56,7 +56,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  generator: "v0.dev",
 };
 
 export default function RootLayout({

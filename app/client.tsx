@@ -55,7 +55,7 @@ export default function ClientLayout({
             <AnimatedBackground />
             <Header />
             <main className="flex-1 relative z-10">{children}</main>
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </ThemeProvider>
       </body>

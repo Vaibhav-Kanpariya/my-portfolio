@@ -22,22 +22,6 @@ export default function Projects() {
       codeLink: "https://github.com/#something",
       liveLink: null,
     },
-    {
-      title: "Pursue - Job Handling with AWS",
-      description:
-        "A JavaScript package for handling job processing using AWS services like SQS, Lambda, and Step Functions.",
-      tags: ["Node.js", "AWS", "SQS", "Lambda", "npm package"],
-      codeLink: "https://github.com/maskeynihal/pursue",
-      liveLink: null,
-    },
-    {
-      title: "Mailer",
-      description:
-        "A JavaScript package to prepare and send emails using AWS SES, with templating support.",
-      tags: ["Node.js", "AWS", "SES", "Email Templates", "npm package"],
-      codeLink: "https://github.com/maskeynihal/mailer",
-      liveLink: null,
-    },
   ];
 
   return (
@@ -98,9 +82,9 @@ export default function Projects() {
           </div>
 
           {/* Include Open Source section directly under Projects */}
-          <div className="mt-20">
+          {/* <div className="mt-20">
             <OpenSource />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
