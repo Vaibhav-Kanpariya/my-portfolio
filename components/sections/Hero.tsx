@@ -1,22 +1,22 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import { motion, useAnimation, useInView } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react"
-import TypewriterEffect from "@/components/ui/TypewriterEffect"
-import FloatingElements from "@/components/ui/FloatingElements"
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
+import TypewriterEffect from "@/components/ui/TypewriterEffect";
+import FloatingElements from "@/components/ui/FloatingElements";
 
 export default function Hero() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
-  const controls = useAnimation()
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const controls = useAnimation();
 
   useEffect(() => {
     if (isInView) {
-      controls.start("visible")
+      controls.start("visible");
     }
-  }, [isInView, controls])
+  }, [isInView, controls]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -27,7 +27,7 @@ export default function Hero() {
         delayChildren: 0.3,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -39,7 +39,7 @@ export default function Hero() {
         ease: "easeOut",
       },
     },
-  }
+  };
 
   return (
     <section
@@ -91,8 +91,9 @@ export default function Hero() {
           variants={itemVariants}
           className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-12"
         >
-          Passionate about crafting exceptional digital experiences with modern technologies. Specialized in React,
-          Next.js, and Node.js with a proven track record of delivering high-quality solutions for diverse clients.
+          Passionate about crafting exceptional digital experiences with modern
+          technologies. Specialized in React, Next.js, and Node.js with a proven
+          track record of delivering high-quality solutions for diverse clients.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -119,12 +120,15 @@ export default function Hero() {
         </motion.div>
 
         {/* Social Links */}
-        <motion.div variants={itemVariants} className="flex justify-center gap-6">
+        <motion.div
+          variants={itemVariants}
+          className="flex justify-center gap-6"
+        >
           {[
             { icon: Github, href: "#", label: "GitHub" },
             { icon: Linkedin, href: "#", label: "LinkedIn" },
             { icon: Mail, href: "#", label: "Email" },
-          ].map((social, index) => (
+          ].map((social, _) => (
             <motion.a
               key={social.label}
               href={social.href}
@@ -162,5 +166,5 @@ export default function Hero() {
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }

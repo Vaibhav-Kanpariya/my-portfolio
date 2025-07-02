@@ -1,61 +1,66 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Calendar, MapPin, TrendingUp, Users, Code, Award } from "lucide-react"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, MapPin, TrendingUp, Users, Code, Award } from "lucide-react";
 
 export default function Experience() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const experiences = [
     {
-      company: "TechCorp Solutions",
-      role: "Senior Full Stack Developer",
-      period: "Jan 2023 - Present",
-      location: "San Francisco, CA",
+      logo: "./culturex.jpg",
+      company: "CultureX Entertainment Private Limited",
+      role: "SDE | Full Stack Developer",
+      period: "Aug 2023 - Present",
+      location: "Ahmedabad, Gujarat, India",
       type: "Full-time",
-      description: "Leading development of enterprise-scale web applications serving 100K+ users daily.",
+      description:
+        "Leading development of enterprise-scale Influencer marketing web applications serving 100+ users daily.",
       achievements: [
-        "Architected and built 5+ production applications using React, Next.js, and Node.js",
+        "Architected and built 5+ production applications using React,Node.js,Express, and MySQL, enhancing user engagement and operational efficiency.",
         "Improved application performance by 65% through code optimization and caching strategies",
-        "Led a team of 4 developers and mentored 2 junior developers",
+        "Engineered advanced AI solutions using Large Language Models (LLMs) to drive key features and deliver impactful insights, significantly boosting the platform’s intelligence and value.",
         "Implemented CI/CD pipelines reducing deployment time by 80%",
         "Designed and developed RESTful APIs handling 1M+ requests daily",
       ],
-      technologies: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "AWS", "Docker"],
+      technologies: [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "MySQL",
+        "AWS",
+        "Express",
+      ],
       metrics: {
-        projects: "12+",
-        performance: "65%",
+        projects: "5+",
+        performance: "90%",
         team: "4 devs",
-        users: "100K+",
+        users: "100+",
       },
     },
     {
-      company: "InnovateTech Startup",
-      role: "Frontend Developer",
-      period: "Jun 2022 - Dec 2022",
-      location: "Remote",
-      type: "Full-time",
-      description: "Developed responsive web applications and improved user experience for B2B SaaS platform.",
+      logo: "./cds.jpg",
+      company: "Crest Data Systems",
+      role: "Software Engineer Intern",
+      period: "Dec 2022 - Jun 2022",
+      location: "Ahmedabad, Gujarat, India",
+      type: "Internship",
+      description:
+        "Development of the Universal Rest Client (URC) , an innovative internal tool that revolutionized the integration process with multiple SIEM platforms.",
       achievements: [
-        "Built 8+ responsive web components used across multiple products",
-        "Reduced page load times by 45% through performance optimization",
-        "Collaborated with UX/UI designers to implement pixel-perfect designs",
-        "Integrated third-party APIs and payment gateways (Stripe, PayPal)",
-        "Maintained 95%+ code coverage with comprehensive testing",
+        "Successfully acquired knowledge in these cutting-edge technologies, enabling me to optimize project workflows and drive seamless collaboration within teams.",
+        "I collaborated on the development of the Universal Rest Client (URC) , an innovative internal tool that revolutionized the integration process with multiple SIEM platforms. By automating the generation of repetitive code, the URC significantly reduced developer workload by an impressive 70%.",
       ],
-      technologies: ["React", "JavaScript", "SCSS", "Redux", "Jest", "Cypress"],
+      technologies: ["Python", "Docker", "FastAPI", "Git"],
       metrics: {
-        components: "25+",
-        performance: "45%",
-        coverage: "95%",
-        apis: "10+",
+        performance: "70%",
       },
     },
-  ]
+  ];
 
   return (
     <section id="experience" ref={ref} className="py-20 px-6 relative">
@@ -72,7 +77,8 @@ export default function Experience() {
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            2+ years of hands-on experience building scalable applications and leading development teams
+            2+ years of hands-on experience building scalable applications and
+            leading development teams
           </p>
         </motion.div>
 
@@ -84,24 +90,33 @@ export default function Experience() {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.3 }}
             >
-              <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 backdrop-blur-sm">
+              <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 backdrop-blur-sm">
                 <CardContent className="p-8">
                   <div className="grid lg:grid-cols-3 gap-8">
                     {/* Company Info */}
                     <div className="lg:col-span-1">
                       <div className="flex items-center gap-3 mb-4">
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center">
-                          <Code className="h-6 w-6 text-white" />
-                        </div>
+                        <img
+                          src={exp.logo}
+                          alt={`${exp.company} logo`}
+                          className="w-12 h-12 rounded-full object-cover border-2 border-white"
+                        />
                         <div>
-                          <h3 className="text-xl font-bold text-white">{exp.company}</h3>
-                          <Badge variant="secondary" className="bg-cyan-500/10 text-cyan-400 border-cyan-500/20">
+                          <h3 className="text-xl font-bold text-white">
+                            {exp.company}
+                          </h3>
+                          <Badge
+                            variant="secondary"
+                            className="bg-cyan-500/10 text-cyan-400 border-cyan-500/20"
+                          >
                             {exp.type}
                           </Badge>
                         </div>
                       </div>
 
-                      <h4 className="text-lg font-semibold text-cyan-400 mb-2">{exp.role}</h4>
+                      <h4 className="text-lg font-semibold text-cyan-400 mb-2">
+                        {exp.role}
+                      </h4>
 
                       <div className="space-y-2 text-sm text-gray-400">
                         <div className="flex items-center gap-2">
@@ -114,7 +129,9 @@ export default function Experience() {
                         </div>
                       </div>
 
-                      <p className="text-gray-300 mt-4 text-sm leading-relaxed">{exp.description}</p>
+                      <p className="text-gray-300 mt-4 text-sm leading-relaxed">
+                        {exp.description}
+                      </p>
 
                       {/* Key Metrics */}
                       <div className="grid grid-cols-2 gap-4 mt-6">
@@ -123,8 +140,12 @@ export default function Experience() {
                             key={key}
                             className="text-center p-3 rounded-lg bg-gray-800/50 border border-gray-700/50"
                           >
-                            <div className="text-lg font-bold text-cyan-400">{value}</div>
-                            <div className="text-xs text-gray-400 capitalize">{key}</div>
+                            <div className="text-lg font-bold text-cyan-400">
+                              {value}
+                            </div>
+                            <div className="text-xs text-gray-400 capitalize">
+                              {key}
+                            </div>
                           </div>
                         ))}
                       </div>
@@ -143,11 +164,16 @@ export default function Experience() {
                               key={i}
                               initial={{ opacity: 0, x: 20 }}
                               animate={isInView ? { opacity: 1, x: 0 } : {}}
-                              transition={{ duration: 0.5, delay: index * 0.3 + i * 0.1 }}
+                              transition={{
+                                duration: 0.5,
+                                delay: index * 0.3 + i * 0.1,
+                              }}
                               className="flex items-start gap-3 text-gray-300"
                             >
                               <div className="w-2 h-2 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400 mt-2 flex-shrink-0" />
-                              <span className="text-sm leading-relaxed">{achievement}</span>
+                              <span className="text-sm leading-relaxed">
+                                {achievement}
+                              </span>
                             </motion.li>
                           ))}
                         </ul>
@@ -164,7 +190,10 @@ export default function Experience() {
                               key={tech}
                               initial={{ opacity: 0, scale: 0 }}
                               animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                              transition={{ duration: 0.3, delay: index * 0.3 + i * 0.05 }}
+                              transition={{
+                                duration: 0.3,
+                                delay: index * 0.3 + i * 0.05,
+                              }}
                             >
                               <Badge
                                 variant="outline"
@@ -191,11 +220,11 @@ export default function Experience() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               { label: "Years Experience", value: "2+", icon: Calendar },
-              { label: "Projects Completed", value: "20+", icon: Code },
-              { label: "Team Members Led", value: "6+", icon: Users },
+              { label: "Completed Features", value: "8+", icon: Code },
+              // { label: "", value: "6+", icon: Users },
               { label: "Performance Improved", value: "65%", icon: TrendingUp },
             ].map((stat, index) => (
               <motion.div
@@ -206,7 +235,9 @@ export default function Experience() {
                 className="p-6 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
               >
                 <stat.icon className="h-8 w-8 mx-auto mb-3 text-cyan-400" />
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-3xl font-bold text-white mb-2">
+                  {stat.value}
+                </div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
               </motion.div>
             ))}
@@ -214,5 +245,5 @@ export default function Experience() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

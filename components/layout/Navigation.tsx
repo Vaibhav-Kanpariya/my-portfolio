@@ -51,7 +51,7 @@ export default function Navigation() {
               />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              DevPortfolio
+              Vaibhav Kanpariya
             </span>
           </motion.div>
 
@@ -71,9 +71,6 @@ export default function Navigation() {
                 <motion.div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
-            <Button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0">
-              Hire Me
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}

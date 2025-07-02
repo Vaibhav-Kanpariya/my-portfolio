@@ -113,10 +113,12 @@ export default function About() {
                 applications.
               </p>
               <p>
-                Beyond coding, I'm passionate about mentoring other developers,
-                contributing to open-source projects, and staying at the
-                forefront of web development trends. I believe in writing clean,
-                maintainable code and following industry best practices.
+                I am deeply committed to continuous learning and exploring new
+                technologies in web development. I focus on creating efficient,
+                scalable solutions while adhering to best practices in the
+                industry. My passion lies in building high-quality applications
+                that not only meet client needs but also push the boundaries of
+                what’s possible in the digital space.
               </p>
             </div>
 
@@ -159,7 +161,7 @@ export default function About() {
               {/* Profile Image Placeholder */}
               <div className="relative w-full h-full rounded-full bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-gray-700 flex items-center justify-center overflow-hidden">
                 <img
-                  src="/placeholder.svg?height=320&width=320"
+                  src="/dp.jpeg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
@@ -176,7 +178,7 @@ export default function About() {
                 <div className="text-sm">Years Exp</div>
               </motion.div>
 
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: 1 }}
@@ -184,13 +186,13 @@ export default function About() {
               >
                 <div className="text-2xl font-bold">20+</div>
                 <div className="text-sm">Projects</div>
-              </motion.div>
+              </motion.div> */}
             </div>
           </motion.div>
         </div>
 
         {/* Highlights Grid */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -208,7 +210,7 @@ export default function About() {
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
               >
-                <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 h-full">
+                <Card className="bg-gradient-to-br rounded-xl from-gray-900/50 to-gray-800/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 h-full">
                   <CardContent className="p-6 text-center">
                     <highlight.icon className="h-12 w-12 mx-auto mb-4 text-blue-400" />
                     <h4 className="text-lg font-semibold text-white mb-2">
@@ -222,7 +224,7 @@ export default function About() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Values & Approach */}
         <motion.div
