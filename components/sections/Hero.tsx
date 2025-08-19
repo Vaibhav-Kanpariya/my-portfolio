@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import TypewriterEffect from "@/components/ui/TypewriterEffect";
@@ -18,7 +18,7 @@ export default function Hero() {
     }
   }, [isInView, controls]);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -29,14 +29,16 @@ export default function Hero() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
       },
     },
   };
@@ -103,18 +105,16 @@ export default function Hero() {
         >
           <Button
             size="lg"
-            className="group bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0 px-8 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300"
-          >
-            View My Work
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-
-          <Button
-            size="lg"
             variant="outline"
-            className="group border-2 border-gray-600 text-gray-300 hover:bg-white hover:text-black px-8 py-4 text-lg font-semibold rounded-full bg-transparent transition-all duration-300"
+            className="group bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0 px-8 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300"
+            onClick={() =>
+              window.open(
+                "https://my-personal-info-bucket-0112.s3.ap-south-1.amazonaws.com/Vaibhav%20Resume.pdf",
+                "_blank"
+              )
+            }
           >
-            <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+            <Download className="mr-2 h-12 w-12 group-hover:scale-110 transition-transform" />
             Download Resume
           </Button>
         </motion.div>
@@ -125,13 +125,27 @@ export default function Hero() {
           className="flex justify-center gap-6"
         >
           {[
-            { icon: Github, href: "#", label: "GitHub" },
-            { icon: Linkedin, href: "#", label: "LinkedIn" },
-            { icon: Mail, href: "#", label: "Email" },
+            {
+              icon: Github,
+              href: "https://github.com/Vaibhav-Kanpariya",
+              label: "GitHub",
+            },
+            {
+              icon: Linkedin,
+              href: "https://www.linkedin.com/in/vaibhav-kanpariya/",
+              label: "LinkedIn",
+            },
+            {
+              icon: Mail,
+              href: "mailto:kanpariyavaibhav966@gmail.com",
+              label: "Email",
+            },
           ].map((social, _) => (
             <motion.a
               key={social.label}
               href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.2, y: -5 }}
               whileTap={{ scale: 0.9 }}
               className="group relative p-4 rounded-full bg-gray-800/50 border border-gray-700 hover:border-cyan-500 transition-all duration-300"

@@ -10,12 +10,14 @@ import Skills from "@/components/sections/Skills";
 import Contact from "@/components/sections/Contact";
 import Navigation from "@/components/layout/Navigation";
 import BackgroundEffects from "@/components/ui/BackgroundEffects";
+import ScrollProgress from "@/components/ui/ScrollProgress";
 
 export default function Portfolio() {
   return (
     <div className="relative min-h-screen bg-black text-white overflow-x-hidden">
       <BackgroundEffects />
       <Navigation />
+      <ScrollProgress />
 
       <main>
         <Hero />
@@ -23,7 +25,7 @@ export default function Portfolio() {
         <Experience />
         <Skills />
         <Projects />
-        <Contact />
+        {/* <Contact /> */}
       </main>
     </div>
   );
