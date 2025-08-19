@@ -51,42 +51,42 @@ export default function Skills() {
       skills: [
         {
           name: "React.js",
-          icon: "./TechImages/react.png",
+          icon: "./TechImages/react.svg",
           color: "from-blue-400 to-cyan-400",
         },
         {
           name: "Next.js",
-          icon: "./TechImages/next.png",
+          icon: "./TechImages/nextjs.svg",
           color: "from-gray-400 to-gray-600",
         },
         {
           name: "TypeScript",
-          icon: "./TechImages/typescript.png",
+          icon: "./TechImages/typescript.svg",
           color: "from-blue-500 to-blue-700",
         },
         {
           name: "JavaScript (ES6+)",
-          icon: "./TechImages/javascript.jpg",
+          icon: "./TechImages/javascript.svg",
           color: "from-yellow-400 to-orange-400",
         },
         {
           name: "HTML5 & CSS3",
-          icon: "./TechImages/web.png",
+          icon: "./TechImages/html5.svg",
           color: "from-orange-400 to-red-400",
         },
         {
           name: "Tailwind CSS",
-          icon: "./TechImages/tailwind.png",
+          icon: "./TechImages/tailwindcss.svg",
           color: "from-teal-400 to-cyan-400",
         },
         {
           name: "Zustand",
-          icon: "./TechImages/zustand.png",
+          icon: "./TechImages/zustand.svg",
           color: "from-purple-400 to-indigo-400",
         },
         {
           name: "React Query",
-          icon: "./TechImages/reactquery.png",
+          icon: "./TechImages/reactquery.svg",
           color: "from-purple-400 to-indigo-400",
         },
       ],
@@ -100,27 +100,27 @@ export default function Skills() {
       skills: [
         {
           name: "Node.js",
-          icon: "./TechImages/node.png",
+          icon: "./TechImages/nodejs.svg",
           color: "from-green-400 to-emerald-400",
         },
         {
           name: "Express.js",
-          icon: "./TechImages/express.png",
+          icon: "./TechImages/express.svg",
           color: "from-gray-400 to-slate-400",
         },
         {
           name: "Python",
-          icon: "./TechImages/python.png",
+          icon: "./TechImages/python.svg",
           color: "from-blue-400 to-yellow-400",
         },
         {
           name: "FastAPI",
-          icon: "./TechImages/fastapi.png",
+          icon: "./TechImages/fastapi.svg",
           color: "from-green-400 to-teal-400",
         },
         {
           name: "RESTful APIs",
-          icon: "./TechImages/restapi.png",
+          icon: "./TechImages/restapi.svg",
           color: "from-indigo-400 to-purple-400",
         },
       ],
@@ -134,32 +134,32 @@ export default function Skills() {
       skills: [
         {
           name: "PostgreSQL",
-          icon: "./TechImages/postgre.png",
+          icon: "./TechImages/postgresql.svg",
           color: "from-blue-400 to-indigo-400",
         },
         {
           name: "MongoDB",
-          icon: "./TechImages/mongo.png",
+          icon: "./TechImages/mongodb.svg",
           color: "from-green-400 to-emerald-400",
         },
         {
           name: "AWS Services",
-          icon: "./TechImages/aws.png",
+          icon: "./TechImages/aws.svg",
           color: "from-orange-400 to-yellow-400",
         },
         {
           name: "Docker",
-          icon: "./TechImages/docker.png",
+          icon: "./TechImages/docker.svg",
           color: "from-blue-400 to-cyan-400",
         },
         {
           name: "Firebase",
-          icon: "./TechImages/firebase.png",
+          icon: "./TechImages/firebase.svg",
           color: "from-orange-400 to-red-400",
         },
         {
           name: "MySQL",
-          icon: "./TechImages/mysql.png",
+          icon: "./TechImages/mysql.svg",
           color: "from-orange-400 to-red-400",
         },
       ],
@@ -173,22 +173,22 @@ export default function Skills() {
       skills: [
         {
           name: "Git & GitHub",
-          icon: "./TechImages/git.png",
+          icon: "./TechImages/git.svg",
           color: "from-gray-400 to-slate-400",
         },
         {
           name: "VS Code",
-          icon: "./TechImages/vscode.jpg",
+          icon: "./TechImages/vscode.svg",
           color: "from-blue-400 to-indigo-400",
         },
         {
           name: "JIRA",
-          icon: "./TechImages/jira.png",
+          icon: "./TechImages/jira.svg",
           color: "from-blue-400 to-indigo-400",
         },
         {
           name: "Figma",
-          icon: "./TechImages/figma.png",
+          icon: "./TechImages/figma.svg",
           color: "from-blue-400 to-indigo-400",
         },
       ],
@@ -196,23 +196,23 @@ export default function Skills() {
     ai: {
       title: "AI & Tools",
       icon: BrainCircuit,
-      color: "from-orange-400 to-red-500",
-      bgGradient: "from-orange-500/10 to-red-500/10",
-      borderColor: "border-orange-500/30",
+      color: "from-purple-400 to-purple-500 bg-pu",
+      bgGradient: "from-purple-500/10 to-cyan-500/10",
+      borderColor: "border-purple-500/30",
       skills: [
         {
           name: "OpenAI",
-          icon: "./TechImages/openai.png",
+          icon: "./TechImages/openai.svg",
           color: "from-gray-400 to-slate-400",
         },
         {
           name: "LangChain",
-          icon: "./TechImages/langchain.png",
+          icon: "./TechImages/langchain.svg",
           color: "from-blue-400 to-indigo-400",
         },
         {
           name: "Gemini",
-          icon: "./TechImages/gemini.png",
+          icon: "./TechImages/gemini.svg",
           color: "from-blue-400 to-indigo-400",
         },
       ],
@@ -316,19 +316,19 @@ export default function Skills() {
         </motion.div>
 
         {/* Skills Categories */}
-        <div className="grid lg:grid-cols-4 gap-8">
+        <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+          <TrendingUp className="h-6 w-6 text-purple-400" />
+          Skill Categories
+        </h3>
+        <div className="grid lg:grid-cols-4 gap-8 lg:h-auto">
           {/* Enhanced Category Selector */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="lg:col-span-1"
+            className="lg:col-span-1 flex flex-col h-full"
           >
-            <div className="sticky top-24">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                <TrendingUp className="h-6 w-6 text-purple-400" />
-                Skill Categories
-              </h3>
+            <div className="sticky top-24 flex-1">
               <div className="space-y-3">
                 {Object.entries(skillCategories).map(([key, category]) => {
                   const IconComponent = category.icon;
@@ -389,7 +389,7 @@ export default function Skills() {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="lg:col-span-3"
+            className="lg:col-span-3 flex flex-col h-full"
           >
             <AnimatePresence mode="wait">
               <motion.div
@@ -398,9 +398,10 @@ export default function Skills() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
+                className="flex flex-1 flex-col"
               >
                 <Card
-                  className={`bg-gradient-to-br ${skillCategories[activeCategory].bgGradient} border ${skillCategories[activeCategory].borderColor} backdrop-blur-sm`}
+                  className={`bg-gradient-to-br ${skillCategories[activeCategory].bgGradient} border ${skillCategories[activeCategory].borderColor} backdrop-blur-sm rounded-xl flex-1`}
                 >
                   <CardContent className="p-8">
                     <div className="flex items-center gap-3 mb-8">
@@ -442,7 +443,7 @@ export default function Skills() {
                                 <img
                                   src={skill.icon}
                                   alt={skill.name}
-                                  className="h-10 w-10 rounded-full object-fit"
+                                  className="h-10 w-10 object-fit"
                                 />
                               </div>
                               <h4 className="text-white font-semibold text-sm group-hover:text-cyan-400 transition-colors">
